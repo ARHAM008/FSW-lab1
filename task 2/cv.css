@@ -1,0 +1,162 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    transition: background 0.5s;
+}
+
+.cv-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 32px 36px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    color: #333;
+}
+
+header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.3rem;
+    color: #ff6f61;
+}
+
+.contact {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.contact a {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.github a {
+    background: #eaf6fb;
+    color: #333;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-left: 8px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.github a:hover {
+    background: #ffb6a9;
+    color: #fff;
+}
+
+.summary {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    color: #444;
+}
+
+h2 {
+    color: #ff6f61;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+.year {
+    color: #0072ff;
+    font-size: 0.95rem;
+    margin-left: 8px;
+}
+
+.project {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffe0d3;
+}
+
+.project:last-child {
+    border-bottom: none;
+}
+
+.project h3 {
+    margin: 0 0 4px 0;
+    color: #ff6f61;
+    font-size: 1.08rem;
+}
+
+.tech {
+    font-size: 0.98rem;
+    color: #0072ff;
+    margin-bottom: 4px;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+    max-width: 700px;
+    margin: 18px auto 0 auto;
+    font-size: 1.08rem;
+}
+
+.theme-switcher label {
+    color: #ff6f61;
+    font-weight: 500;
+}
+
+#themeToggle {
+    width: 22px;
+    height: 22px;
+    accent-color: #ff6f61;
+    cursor: pointer;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+}
+
+body.dark-theme .cv-container {
+    background: #232526;
+    color: #f5f7fa;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.32);
+}
+
+body.dark-theme header h1,
+body.dark-theme h2,
+body.dark-theme .project h3 {
+    color: #ffd6c0;
+}
+
+body.dark-theme .contact,
+body.dark-theme .summary,
+body.dark-theme ul li,
+body.dark-theme .tech,
+body.dark-theme .year {
+    color: #ffe0d3;
+}
+
+body.dark-theme .github a {
+    background: #ffb6a9;
+    color: #232526;
+}
+
+body.dark-theme .github a:hover {
+    background: #0072ff;
+    color: #fff;
+}
+
+body.dark-theme .project {
+    border-bottom: 1px solid #ffb6a9;
+}

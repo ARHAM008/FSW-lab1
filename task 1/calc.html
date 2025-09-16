@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aesthetic Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="btn" onclick="clearDisplay()">C</button>
+            <button class="btn" onclick="input('%')">%</button>
+            <button class="btn" onclick="input('/')">÷</button>
+            <button class="btn" onclick="backspace()">⌫</button>
+
+            <button class="btn" onclick="input('7')">7</button>
+            <button class="btn" onclick="input('8')">8</button>
+            <button class="btn" onclick="input('9')">9</button>
+            <button class="btn" onclick="input('*')">×</button>
+
+            <button class="btn" onclick="input('4')">4</button>
+            <button class="btn" onclick="input('5')">5</button>
+            <button class="btn" onclick="input('6')">6</button>
+            <button class="btn" onclick="input('-')">−</button>
+
+            <button class="btn" onclick="input('1')">1</button>
+            <button class="btn" onclick="input('2')">2</button>
+            <button class="btn" onclick="input('3')">3</button>
+            <button class="btn" onclick="input('+')">+</button>
+
+            <button class="btn" onclick="input('0')">0</button>
+            <button class="btn" onclick="input('.')">.</button>
+            <button class="btn equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+        let currentInput = '';
+
+        // Adds a character (number/operator) to the current input
+        function appendToInput(value) {
+            if (display.innerText === '0' && value !== '.') {
+                currentInput = '';
+            }
+            currentInput += value;
+            updateDisplay(currentInput);
+        }
+
+        // Clears the calculator display and input
+        function clearCalculator() {
+            currentInput = '';
+            updateDisplay('0');
+        }
+
+        // Removes the last character from the input
+        function removeLastCharacter() {
+            currentInput = currentInput.slice(0, -1);
+            updateDisplay(currentInput || '0');
+        }
+
+        // Evaluates the current input and displays the result
+        function evaluateExpression() {
+            try {
+                // Replace symbols for eval compatibility
+                const sanitizedInput = currentInput.replace('÷', '/').replace('×', '*');
+                const result = eval(sanitizedInput);
+                updateDisplay(result);
+                currentInput = result.toString();
+            } catch {
+                updateDisplay('Error');
+                currentInput = '';
+            }
+        }
+
+        // Updates the display area
+        function updateDisplay(value) {
+            display.innerText = value;
+        }
+
+        // Button event handlers
+        function input(val) { appendToInput(val); }
+        function clearDisplay() { clearCalculator(); }
+        function backspace() { removeLastCharacter(); }
+        function calculate() { evaluateExpression(); }
+    </script>
+</body>
+</html>

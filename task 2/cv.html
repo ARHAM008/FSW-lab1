@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M Arham - CV</title>
+    <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+    <div class="theme-switcher">
+        <label for="themeToggle">🌞/🌙 Theme:</label>
+        <input type="checkbox" id="themeToggle">
+    </div>
+    <div class="cv-container">
+        <header>
+            <h1>M Arham</h1>
+            <p class="contact">
+                Islamabad, 44010, Pakistan | +92 336-5915299 | 
+                <a href="mailto:carham106@gmail.com">carham106@gmail.com</a>
+                <span class="github"><a href="#">GitHub</a></span>
+            </p>
+            <p class="summary">
+                Second-year Computer Science student at Air University with a strong foundation in programming languages.
+                Passionate about solving real-world problems through technology and currently seeking an internship opportunity
+                to further enhance and apply my skills in a practical environment.
+            </p>
+        </header>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li><strong>Air University</strong><br>Bachelors in Computer Science <span class="year">Sep 2023 - Present</span></li>
+                <li><strong>Punjab College</strong><br>Intermediate <span class="year">2021 - 2023</span></li>
+                <li><strong>Beaconhouse School System</strong><br>Matric <span class="year">2018 - 2020</span></li>
+            </ul>
+        </section>
+        <section>
+            <h2>Core Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Python (Proficient), C/C++ (Intermediate), C# (Beginner), Assembly 8086 (Intermediate)</li>
+                <li><strong>Frameworks:</strong> Flutter (Beginner), .NET Blazor (Intermediate)</li>
+                <li><strong>Databases:</strong> SQLite (Intermediate), MySQL (Intermediate), Firebase (Beginner)</li>
+                <li><strong>Other Skills:</strong> GitHub, MS Office, Adobe Photoshop</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Medicare – Advanced Hospital Management System</h3>
+                <p class="tech">ASP.NET Core 9.0, Blazor Server, C#, Bootstrap, HTML/CSS, JavaScript, SSMS</p>
+                <p>
+                    Developed a comprehensive healthcare management platform designed to streamline hospital operations and
+                    improve patient care coordination across multiple user roles. A role-based system with distinct views for five
+                    roles, secure authentication, notifications, AI-driven risk analysis, and file upload/download features.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Signal Firewall–Priority Traffic Route Generator</h3>
+                <p class="tech">C++, SFML Graphics Library, GDAL (Geospatial Data Abstraction Library)</p>
+                <p>
+                    Developed an intelligent traffic signal management system that visualizes road networks and optimizes traffic
+                    flow through dynamic signal control. The system features: Interactive Map Visualization, Pathfinding Algorithm,
+                    Dynamic Signal Control, Real-time Interaction, Custom Data Structures.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Crime Investigation System</h3>
+                <p class="tech">Python, Tkinter, MySQL</p>
+                <p>
+                    Developed a comprehensive crime investigation management system that streamlines law enforcement
+                    operations through digital case management and data visualization. The system features: Case Management
+                    Interface, Database Integration, Evidence Tracking, System Suspect & Witness Management, Search & Filter
+                    Functionality, Reporting & Analytics, User Authentication & Role Management, Data Visualization
+                </p>
+            </div>
+            <div class="project">
+                <h3>Abd Tech– E-commerce Website</h3>
+                <p class="tech">HTML, CSS</p>
+                <p>
+                    Developed a responsive e-commerce website for PC gaming products, featuring a modern navigation bar,
+                    product listings, and interactive UI elements.
+                </p>
+            </div>
+        </section>
+    </div>
+    <script>
+        // Theme switcher
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('change', function() {
+            document.body.classList.toggle('dark-theme', themeToggle.checked);
+        });
+    </script>
+</body>
+</html>
