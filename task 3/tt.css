@@ -1,0 +1,178 @@
+body {
+    background: linear-gradient(120deg, #f7971e 0%, #ffd200 100%);
+    font-family: 'Montserrat', 'Segoe UI', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    margin: 32px 0 18px 0;
+    font-size: 2.3rem;
+    color: #7c3aed;
+    letter-spacing: 2px;
+    font-weight: 900;
+    text-shadow: 0 2px 16px #ffd200;
+}
+
+.timetable-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timetable {
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255,255,255,0.85);
+    border-radius: 22px;
+    box-shadow: 0 12px 48px rgba(247, 151, 30, 0.18);
+    overflow: hidden;
+    min-width: 950px;
+    animation: fadeInTable 1.2s cubic-bezier(.77,0,.18,1) both;
+}
+
+@keyframes fadeInTable {
+    from { opacity: 0; transform: scale(0.96);}
+    to { opacity: 1; transform: scale(1);}
+}
+
+th, td {
+    border: 1px solid #ffd200;
+    padding: 20px 14px;
+    text-align: center;
+    font-size: 1.12rem;
+    min-width: 120px;
+    vertical-align: middle;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+th {
+    background: linear-gradient(90deg, #7c3aed 0%, #a78bfa 100%);
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.course {
+    cursor: pointer;
+    border-radius: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(247, 151, 30, 0.10);
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+    filter: grayscale(0.1) brightness(0.98);
+    opacity: 0.95;
+}
+
+.course span {
+    display: block;
+    font-size: 0.98rem;
+    font-weight: 400;
+    color: #333;
+    margin-top: 4px;
+}
+
+.course.active {
+    outline: 3px solid #7c3aed;
+    box-shadow: 0 0 0 6px #ffd200;
+    transform: scale(1.07);
+    z-index: 2;
+    filter: none;
+    opacity: 1;
+    animation: pulse 0.7s;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #ffd200; }
+    70% { box-shadow: 0 0 0 12px #ffd20044; }
+    100% { box-shadow: 0 0 0 6px #ffd200; }
+}
+
+/* Unique aesthetic colors for each course */
+.linear-algebra {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+    color: #7c3aed;
+}
+
+.os-lab {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    color: #0f3443;
+}
+
+.fswd {
+    background: linear-gradient(135deg, #ff6a88 0%, #ff99ac 100%);
+    color: #7c3aed;
+}
+
+.fswd-lab {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #f7971e;
+}
+
+.daa {
+    background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
+    color: #7c3aed;
+}
+
+.ai {
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    color: #f7971e;
+}
+
+.ai-lab {
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    color: #7c3aed;
+}
+
+.os {
+    background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+    color: #fff;
+}
+
+.management {
+    background: linear-gradient(135deg, #fcb69f 0%, #ffecd2 100%);
+    color: #7c3aed;
+}
+
+.advisory {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #f7971e;
+}
+
+/* Hover effect for courses */
+.course:hover {
+    filter: none;
+    opacity: 1;
+    box-shadow: 0 8px 32px rgba(124, 58, 237, 0.18);
+    transform: scale(1.04);
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .timetable {
+        min-width: 600px;
+        font-size: 0.95rem;
+    }
+    th, td {
+        padding: 10px 4px;
+        min-width: 80px;
+    }
+}
+
+@media (max-width: 700px) {
+    .timetable-container {
+        overflow-x: auto;
+    }
+    .timetable {
+        min-width: 500px;
+        font-size: 0.9rem;
+    }
+    th, td {
+        padding: 8px 2px;
+        min-width: 60px;
+    }
+}

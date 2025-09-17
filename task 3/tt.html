@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BSCS-V-A (M) Timetable</title>
+    <link rel="stylesheet" href="tt.css">
+</head>
+<body>
+    <h1 class="title">BSCS-V-A (M) Timetable</h1>
+    <div class="timetable-container">
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>08:00-09:20am</th>
+                    <th>09:20-10:40am</th>
+                    <th>10:40am-12:00pm</th>
+                    <th>12:00pm-01:20pm</th>
+                    <th>01:20pm-02:40pm</th>
+                    <th>02:40pm-04:00pm</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mon</td>
+                    <td class="course linear-algebra" onclick="highlight(this)">Linear Algebra<br><span>Dr Waqas Sarwar Abbasi</span></td>
+                    <td class="course os-lab" onclick="highlight(this)">Operating System Lab<br><span>CS-304 (Morning)<br>Lab 12 C Block</span></td>
+                    <td class="course os-lab" onclick="highlight(this)">Operating System Lab<br><span>Lab 12 C Block (2nd Floor)</span></td>
+                    <td class="course os-lab" onclick="highlight(this)">Operating System Lab<br><span>CS-304 (Morning)</span></td>
+                    <td class="course fswd" onclick="highlight(this)">Full Stack Web Development<br><span>CS-301 (Morning)</span></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tue</td>
+                    <td class="course fswd-lab" onclick="highlight(this)">Full Stack Web Development Lab<br><span>Lab 6 A Block (Morning)</span></td>
+                    <td class="course daa" onclick="highlight(this)">Design and Analysis of Algorithms<br><span>CS-304 (Morning)</span></td>
+                    <td class="course ai" onclick="highlight(this)">Artificial Intelligence<br><span>CS-305 (Morning)</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Wed</td>
+                    <td class="course ai-lab" onclick="highlight(this)">Artificial Intelligence Lab<br><span>Lab 6 A Block (Morning)</span></td>
+                    <td class="course os" onclick="highlight(this)">Operating Systems<br><span>CS-303 (Morning)</span></td>
+                    <td class="course fswd" onclick="highlight(this)">Full Stack Web Development<br><span>CS-306 (Morning)</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Thu</td>
+                    <td class="course linear-algebra" onclick="highlight(this)">Linear Algebra<br><span>CYS-204 (Morning)</span></td>
+                    <td class="course ai" onclick="highlight(this)">Artificial Intelligence<br><span>CS-305 (Morning)</span></td>
+                    <td class="course daa" onclick="highlight(this)">Design and Analysis of Algorithms<br><span>CS-301 (Morning)</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Fri</td>
+                    <td class="course management" onclick="highlight(this)">Introduction to Management<br><span>CS-306 (Morning)</span></td>
+                    <td class="course advisory" onclick="highlight(this)">Operating Systems/Advisory Class<br><span>CYS-203 (Morning)</span></td>
+                    <td class="course management" onclick="highlight(this)">Introduction to Management<br><span>CYS-205 (Morning)</span></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function highlight(cell) {
+            document.querySelectorAll('.course').forEach(c => c.classList.remove('active'));
+            cell.classList.add('active');
+        }
+    </script>
+</body>
+</html>
